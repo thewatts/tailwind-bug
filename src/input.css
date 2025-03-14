@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* overriding dark mode variant for the time being */
+/* https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually */
+custom-variant dark (&:where(.dark, .dark *));
+
+.my-class {
+  color: blue;
+}
+
+:root {
+  --critical: var(--color-red-600);
+}
+
+&:where(.dark, .dark *):root {
+  --critical: var(--color-blue-600);
+}
+
+@theme {
+  --color-critical: var(--critical);
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-900">
+    <button
+      type="button"
+      class="thing rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50"
+      onclick="toggleDark()"
+    >
+      Button text
+    </button>
+
+    <main class="container mx-auto mt-28 px-5 flex">
+      <a
+        href="#"
+        class="bg-critical rounded-md px-3.5 py-2.5 text-white block font-medium"
+      >
+        Testing
+      </a>
+    </main>
+
+    <script>
+      function toggleDark() {
+        const body = document.querySelector("body");
+
+        //body.classList.toggle("dark");
+        document.documentElement.classList.toggle("dark");
+      }
+    </script>
+  </body>
+</html>
